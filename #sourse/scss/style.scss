@@ -1,0 +1,119 @@
+//МИКСИНЫ
+@import "mixins.scss";
+
+//VARIABLES=====================================================================================================
+$minwidth: 320px;
+$mw: 880;
+$md1: $mw+12;
+$md2: 750.98;
+// $md3: 767.98;
+$md3: 479.98;
+//VARIABLES=====================================================================================================
+
+//CONNECTED FONTS===============================================================================================
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+// @font-face {
+// 	font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+// 	src: url('../fonts/AkzidenzGrotesk-Regular.eot');
+// 	src: local('☺'), url('../fonts/AkzidenzGrotesk-Regular.woff') format('woff'), url('../fonts/AkzidenzGrotesk-Regular.ttf') format('truetype'), url('../fonts/AkzidenzGrotesk-Regular.svg') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+@font-face {
+	font-family: 'Bebas';
+	src: url('../fonts/BebasNeue Book.eot');
+	src: local('☺'), url('../fonts/BebasNeue Book.woff') format('woff'), url('../fonts/BebasNeue Book.ttf') format('truetype'), url('../fonts/BebasNeue Book.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+	src: url('../fonts/Akzidenz-Grotesk BQ Condensed Bold.eot');
+	src: local('☺'), url('../fonts/Akzidenz-Grotesk BQ Condensed Bold.woff') format('woff'), url('../fonts/Akzidenz-Grotesk BQ Condensed Bold.ttf') format('truetype'), url('../fonts/Akzidenz-Grotesk BQ Condensed Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+//CONNECTED FONTS===============================================================================================
+
+//DEFAULT FONTS=================================================================================================
+$fontfamily: "PT Sans";
+//DEFAULT FONTS=================================================================================================
+
+//RESET=========================STYLES==========================================================================
+@import "null.scss";
+
+body{
+
+}
+//RESET=========================STYLES==========================================================================
+
+//ОБОЛОЧКА======================================================================================================
+.wrapper{
+	overflow: hidden;
+	width: 100%;
+	min-height: 100%;
+}
+//ОБОЛОЧКА======================================================================================================
+
+//ОСНОВНАЯ=======================СЕТКА==========================================================================
+.container{
+	max-width:$mw+px; margin:0 auto;width: 100%;
+	@media(max-width:$md1+px){max-width: 750px;}
+	@media(max-width:$md2+px){max-width: none;padding:0 10px;}
+}
+//ОСНОВНАЯ=======================СЕТКА==========================================================================
+
+//ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ=================================================================
+@import "ui.scss";
+@import "header.scss";
+@import "mainblock.scss";
+@import "products.scss";
+@import "why.scss";
+@import "contacts.scss";
+@import "footer.scss";
+//ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ=================================================================
+
+//ОСНОВНОЙ=======================БЛОК===========================================================================
+.title{
+	font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+	text-transform: uppercase;
+}
+
+.text{
+	font-size: 15px;
+	line-height: 25px;
+}
+
+.btn, .link{
+	font-weight: 700;
+	font-family: Bebas;
+	font-size: 15px;
+	line-height: 15px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+
+.btn{
+		padding: 18px 33px;
+	&_w {
+		background-color: #ffffff;
+		color: #000000;
+	}
+	&_b {
+		background-color: #000000;
+		color: #ffffff;
+	}
+}
+.link{
+	text-decoration: underline;
+	&_w {
+		color: #ffffff;
+	}
+	&_b {
+		color: #000000;
+	}
+}
+//ОСНОВНОЙ=======================БЛОК===========================================================================
+
+//==============================================================================================================

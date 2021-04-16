@@ -1,0 +1,62 @@
+.slider {
+	background-color: #f7f7f7;
+	padding: 120px 0 60px 0;
+	&__body {}
+	&__item {
+		text-align: center;
+	}
+	&__icon {
+		margin: 0 0 35px 0;
+	}
+	&__title {
+		margin: 0 0 20px 0;
+		color: #353738;
+		font-size: 18px;
+		font-weight: 700;
+		letter-spacing: 1.8px;
+		span{
+			color: #848789;
+			font-weight: 300;
+		}
+	}
+	&__text {
+		text-align: center;
+		color: #848789;
+		font-size: 24px;
+		line-height: 34px;
+		font-style: italic;
+	}
+	& .slick-dots{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		li{
+			margin: 100px 4.5px 0;
+			@media (max-width:767px){
+				&{
+					margin: 30px 4.5px 0;
+				}
+			}
+			//ЭЛЕМЕНТ ТОЧКИ
+		button{
+				width: 11px;
+				height: 11px;
+				border-radius: 50%;
+				font-size: 0;
+				background-color: transparent;
+				border: 1px solid #a9afb3;
+			}
+			//АКТИВНАЯ ТОЧКА
+			&.slick-active {
+				button{
+					background-color:#a9afb3;
+				}
+			}
+		}
+	}
+	@media (max-width:767px){
+		&{
+			padding: 60px 0 30px;
+		}
+	}
+}
